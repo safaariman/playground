@@ -13,10 +13,13 @@ WorkDir = '.'
 
 
 def setup():
-    shelltools.move('Apache License.txt', 'LICENSE')
-    shelltools.chmod('*.ttf', 0o644)
+    pass
+
+
+def build():
+    pass
 
 
 def install():
-    pisitools.insinto('/usr/share/fonts/TTF/', '*.ttf')
-    pisitools.dodoc('LICENSE')
+    pisitools.insinto('/opt', 'zoom')
+    pisitools.dosym('/opt/zoom/ZoomLauncher', '/usr/bin/zoom')
