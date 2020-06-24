@@ -14,7 +14,10 @@ ObjDir = "build"
 locales = "az bs ca  da  de  el  en-US en-GB  es-AR  es-CL  es-ES  fi  fr  hr  hu  it  lt nl  pl  pt-BR  pt-PT  ro  ru  sr  sv-SE  tr  uk".split()
 xpidir = "%s/xpi" % get.workDIR()
 arch = get.ARCH()
-ver = "71.0b7"
+ver = "%s" % get.srcVERSION().replace('_beta', 'b')
+version = get.srcVERSION()
+version = version.split('_')[0]
+WorkDir = "firefox-%s" %version
 
 shelltools.export("SHELL", "/bin/sh")
 shelltools.export("MOZBUILD_STATE_PATH", "/mozbuild")
@@ -47,7 +50,7 @@ def setup():
     
 def build():
     shelltools.cd(ObjDir)
-    shelltools.system("../mach build -j5")
+    shelltools.system("../mach build -j6")
 
 def install():
     shelltools.cd(ObjDir)
