@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-ptyprocess</Name>
+        <Homepage>https://github.com/pexpect/ptyprocess</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>ISC</License>
+        <IsA>library</IsA>
+        <Summary>Run a subprocess in a pseudo terminal</Summary>
+        <Description>Launch a subprocess in a pseudo terminal (pty), and interact with both the process and its pty.</Description>
+        <Archive sha1sum="39622a2ff2cb456f17db542d60e5a0782e354128" type="targz">https://files.pythonhosted.org/packages/7d/2d/e4b8733cf79b7309d84c9081a4ab558c89d8c89da5961bf4ddb050ca1ce0/ptyprocess-0.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-ptyprocess</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-03</Date>
+            <Version>0.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

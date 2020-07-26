@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>exempi</Name>
+        <Homepage>https://libopenraw.freedesktop.org/exempi/</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>XMP implementation</Summary>
+        <Description>Exempi is an implementation of XMP. It is based on Adobe XMP SDK 4.1.1. The API is C based and means to be used from any language and be easier to maintain ABI stability.</Description>
+        <Archive sha1sum="445c20c1bad06c75ca5d1963662c25dd9bdf8e1d" type="tarbz2">https://libopenraw.freedesktop.org/download/exempi-2.5.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>exempi</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libexempi.*</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>exempi-devel</Name>
+        <Summary>Development files for exempi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">exempi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-02</Date>
+            <Version>2.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

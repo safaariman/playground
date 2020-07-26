@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-settings-daemon</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-settings-daemon</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app</IsA>
+        <Summary>The daemon sharing settings from Cinnamon to GTK+/KDE applications</Summary>
+        <Description>A daemon to share settings from Cinnamon to other applications. It also handles global keybindings, and many of desktop-wide settings.</Description>
+        <Archive sha1sum="92e696d1c3ef44db2bb9f734dd62d6b7adf9bd14" type="targz">https://github.com/linuxmint/cinnamon-settings-daemon/archive/4.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>nspr-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>colord-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>autoconf-archive</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libcanberra-gtk-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+            <Dependency>xorg-input-wacom-devel</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-settings-daemon</Name>
+        <RuntimeDependencies>
+            <Dependency>nss</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib/cinnamon-settings-daemon-3.0</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-settings-daemon-devel</Name>
+        <Summary>Development files for cinnamon-settings-daemon</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-settings-daemon</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

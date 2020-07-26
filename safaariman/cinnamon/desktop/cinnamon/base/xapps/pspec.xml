@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xapps</Name>
+        <Homepage>https://github.com/linuxmint/xapps</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Common files for XApp desktop apps</Summary>
+        <Description>This package includes files that are shared between several XApp apps (i18n files and configuration schemas).</Description>
+        <Archive sha1sum="46d7ca00d3f24c8835d460626db9c3b997dcb7e7" type="targz">https://github.com/linuxmint/xapps/archive/1.8.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>libdbusmenu-gtk3-devel</Dependency>
+            <Dependency>python-pygobject3-devel</Dependency>
+            <Dependency>python3-pygobject3-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xapps</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xapps-devel</Name>
+        <Summary>Development files for xapps</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xapps</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>1.8.6</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

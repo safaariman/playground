@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-translations</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-translations</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>locale</IsA>
+        <Summary>Translations for Cinnamon and Nemo</Summary>
+        <Description>Translations for Cinnamon and Nemo</Description>
+        <Archive sha1sum="339255416a2f93b22ab6365129c609518207238f" type="targz">https://github.com/linuxmint/cinnamon-translations/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-translations</Name>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

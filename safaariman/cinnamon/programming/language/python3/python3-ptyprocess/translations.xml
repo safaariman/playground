@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-ptyprocess</Name>
+        <Summary xml:lang="tr">Run a subprocess in a pseudo terminal</Summary>
+        <Description xml:lang="tr">Launch a subprocess in a pseudo terminal (pty), and interact with both the process and its pty.</Description>
+    </Source>
+</PISI>

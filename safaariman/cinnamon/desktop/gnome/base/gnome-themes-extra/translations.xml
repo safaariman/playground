@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnome-themes-extra</Name>
+        <Summary xml:lang="tr">Extra Themes for GNOME Applications</Summary>
+        <Description xml:lang="tr">This module houses themes and theme-y tidbits that don’t really fit in anywhere else, or deserve their own module.</Description>
+    </Source>
+</PISI>

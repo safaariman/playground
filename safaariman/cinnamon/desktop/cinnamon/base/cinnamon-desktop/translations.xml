@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon-desktop</Name>
+        <Summary xml:lang="tr">Library with common API for various Cinnamon modules</Summary>
+        <Description xml:lang="tr">The cinnamon-desktop package contains an internal library (libcinnamon-desktop) used to implement some portions of the Cinnamon desktop, and also some data files and other shared components of the Cinnamon user environment.</Description>
+    </Source>
+</PISI>

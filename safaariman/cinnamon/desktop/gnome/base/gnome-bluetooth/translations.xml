@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnome-bluetooth</Name>
+        <Summary xml:lang="tr">GNOME Bluetooth Subsystem</Summary>
+        <Description xml:lang="tr">The gnome-bluetooth package contains graphical utilities to setup, monitor and use Bluetooth devices.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>caribou</Name>
+        <Summary xml:lang="tr">A simplified in-place on-screen keyboard</Summary>
+        <Description xml:lang="tr">Caribou is a text entry application that currently manifests itself as a simplified in-place on-screen keyboard.</Description>
+    </Source>
+</PISI>

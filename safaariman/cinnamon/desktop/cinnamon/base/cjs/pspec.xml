@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cjs</Name>
+        <Homepage>https://github.com/linuxmint/cjs</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <License>MIT</License>
+        <License>MPL1.1</License>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Javascript Bindings for Cinnamon</Summary>
+        <Description>Makes it possible for applications to use all of GNOME's platform libraries using the Javascript language. It's mainly based on the Mozilla javascript engine and the GObject introspection framework.</Description>
+        <Archive sha1sum="3d36b8d92da1bf87b847e0fa2e92e688a22871b8" type="targz">https://github.com/linuxmint/cjs/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>autoconf-archive</Dependency>
+            <Dependency>spidermonkey-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cjs</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>spidermonkey</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cjs-devel</Name>
+        <Summary>Development files for cjs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cjs</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>spidermonkey-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

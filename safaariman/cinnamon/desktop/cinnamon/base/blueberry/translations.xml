@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>blueberry</Name>
+        <Summary xml:lang="tr">A configuration tool for Bluetooth</Summary>
+        <Description xml:lang="tr">Utility for Bluetooth devices graphical configuration.</Description>
+    </Source>
+</PISI>

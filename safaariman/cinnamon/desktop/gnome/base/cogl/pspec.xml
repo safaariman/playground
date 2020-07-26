@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cogl</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/cogl</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A library for using 3D graphics hardware to draw pretty pictures</Summary>
+        <Description>Cogl is a small open source library for using 3D graphics hardware to draw pretty pictures. The API departs from the flat state machine style of OpenGL and is designed to make it easy to write orthogonal components that can render without stepping on each others toes.
+
+As well aiming for a nice API, we think having a single library as opposed to an API specification like OpenGL has a few advantages too; like being able to paper over the inconsistencies/bugs of different OpenGL implementations in a centralized place, not to mention the myriad of OpenGL extensions. It also means we are in a better position to provide utility APIs that help software developers since they only need to be implemented once and there is no risk of inconsistency between implementations.
+
+Having other backends, besides OpenGL, such as drm, Gallium or D3D are options we are interested in for the future.</Description>
+        <Archive sha1sum="e6c4d07681416c9918d1efeaa87ef0de666c58ea" type="targz">https://gitlab.gnome.org/GNOME/cogl/-/archive/1.22.6/cogl-1.22.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cogl</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libsdl2</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/libcogl*</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cogl-devel</Name>
+        <Summary>Development files for cogl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cogl</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>1.22.6</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

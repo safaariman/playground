@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gtk-engines</Name>
+        <Summary xml:lang="tr">Default GTK+ 2.0 theme engines</Summary>
+        <Description xml:lang="tr">These are the graphical engines for the various GTK+ toolkit themes. Included themes are Notif, Redmond95, Pixmap, Metal (swing-like) and many more...</Description>
+    </Source>
+</PISI>

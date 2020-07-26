@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon</Name>
+        <Summary xml:lang="tr">Window management and application launching for Cinnamon</Summary>
+        <Description xml:lang="tr">Cinnamon is a Linux desktop which provides advanced innovative features and a traditional user experience.</Description>
+    </Source>
+</PISI>

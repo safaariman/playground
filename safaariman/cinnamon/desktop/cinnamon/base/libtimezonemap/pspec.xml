@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libtimezonemap</Name>
+        <Homepage>https://launchpad.net/ubuntu/+source/libtimezonemap/</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Timezone map widget for GTK 3</Summary>
+        <Description>This package contains a timezone map widget for GTK+3.</Description>
+        <Archive sha1sum="7441c9cbc6e6e03593a977574103505f3943e894" type="targz">http://archive.ubuntu.com/ubuntu/pool/main/libt/libtimezonemap/libtimezonemap_0.4.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>libtimezonemap</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libtimezonemap.*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="data">/usr/share/libtimezonemap</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtimezonemap-devel</Name>
+        <Summary>Development files for libtimezonemap</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtimezonemap</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-02</Date>
+            <Version>0.4.6</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

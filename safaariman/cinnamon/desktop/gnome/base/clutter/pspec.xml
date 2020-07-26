@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>clutter</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/clutter</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Software library for fast, visually rich GUIs</Summary>
+        <Description>Clutter is an open source software library for creating fast, visually rich graphical user interfaces. The most obvious example of potential usage is in media center type applications. We hope however it can be used for a lot more.
+
+Clutter uses OpenGL (and soon optionally OpenGL ES) for rendering but with an API which hides the underlying GL complexity from the developer. The Clutter API is intended to be easy to use, efficient and flexible.</Description>
+        <Archive sha1sum="c52482f9f7f0561a6672a8dff9be9ebe5bf992b2" type="targz">https://gitlab.gnome.org/GNOME/clutter/-/archive/1.26.4/clutter-1.26.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>cogl-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>wayland-cursor</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>clutter</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cogl</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libsdl2</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>wayland-cursor</Dependency>
+            <Dependency>wayland-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/clutter-1.0</Path>
+            <Path fileType="library">/usr/lib/libclutter-*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>clutter-devel</Name>
+        <Summary>Development files for clutter</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">clutter</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cogl-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>1.26.4</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

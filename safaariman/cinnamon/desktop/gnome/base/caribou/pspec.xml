@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>caribou</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/caribou</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:gui</IsA>
+        <Summary>A simplified in-place on-screen keyboard</Summary>
+        <Description>Caribou is a text entry application that currently manifests itself as a simplified in-place on-screen keyboard.</Description>
+        <Archive sha1sum="698c0953f2a164d703adb209b1945e69d8e14f5b" type="targz">https://gitlab.gnome.org/GNOME/caribou/-/archive/0.4.21/caribou-0.4.21.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>python-pygobject3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>caribou</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>at-spi2-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/caribou</Path>
+            <Path fileType="data">/usr/share/antler</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/lib/gnome-settings-daemon-3.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/lib/libcaribou*</Path>
+            <Path fileType="library">/usr/lib/gtk-*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>caribou-devel</Name>
+        <Summary>Development files for caribou</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">caribou</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+            <Path fileType="library">/usr/share/vala</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>0.4.21</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

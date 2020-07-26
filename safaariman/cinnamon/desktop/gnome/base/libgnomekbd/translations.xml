@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libgnomekbd</Name>
+        <Summary xml:lang="tr">GNOME keyboard libraries</Summary>
+        <Description xml:lang="tr">GNOME keyboard indicator plugin</Description>
+    </Source>
+</PISI>

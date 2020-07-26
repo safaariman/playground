@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>nemo</Name>
+        <Summary xml:lang="tr">File manager for Cinnamon</Summary>
+        <Description xml:lang="tr">Nemo is the file manager and graphical shell for the Cinnamon desktop that makes it easy to manage your files and the rest of your system. It allows to browse directories on local and remote filesystems, preview files and launch applications associated with them. It is also responsible for handling the icons on the Cinnamon desktop.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>nemo</Name>
+        <Homepage>https://github.com/linuxmint/nemo</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <License>FDLv1.1</License>
+        <IsA>app:gui</IsA>
+        <Summary>File manager for Cinnamon</Summary>
+        <Description>Nemo is the file manager and graphical shell for the Cinnamon desktop that makes it easy to manage your files and the rest of your system. It allows to browse directories on local and remote filesystems, preview files and launch applications associated with them. It is also responsible for handling the icons on the Cinnamon desktop.</Description>
+        <Archive sha1sum="7a8f005e37bec17ca37b852677752301b1665243" type="targz">https://github.com/linuxmint/nemo/archive/4.6.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>xapps-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>exempi-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nemo</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>xapps</Dependency>
+            <Dependency>exempi</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/libnemo-extension.*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/nemo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/gtksourceview-2.0</Path>
+            <Path fileType="data">/usr/share/gtksourceview-3.0</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>nemo-devel</Name>
+        <Summary>Development files for nemo</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">nemo</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-02</Date>
+            <Version>4.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

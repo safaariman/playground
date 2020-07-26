@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libdbusmenu</Name>
+        <Homepage>https://launchpad.net/libdbusmenu</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv2.1</License>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Library for applications to pass a menu structure across DBus</Summary>
+        <Description>A small little library that was created by pulling out some common code out of indicator-applet. It passes a menu structure across DBus so that a program can create a menu simply without worrying about how it is displayed on the other side of the bus.</Description>
+        <Archive sha1sum="f88fc666609ed486a968fd6c8b739dff07d50bdd" type="targz">https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libdbusmenu-glib</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gir-1.0/Dbusmenu-*</Path>
+            <Path fileType="library">/usr/lib/libdbusmenu-glib*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/Dbusmenu-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-glib-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>libdbusmenu-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/vala/vapi/Dbusmenu-*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/dbusmenu-glib-*</Path>
+            <Path fileType="header">/usr/include/libdbusmenu-glib-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-gtk2</Name>
+        <BuildType>gtk2</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">libdbusmenu-glib</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gir-1.0/DbusmenuGtk-*</Path>
+            <Path fileType="library">/usr/lib/libdbusmenu-gtk.*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/DbusmenuGtk-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-gtk2-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libdbusmenu-gtk2</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libdbusmenu-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/vala/vapi/DbusmenuGtk-*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/dbusmenu-gtk-*</Path>
+            <Path fileType="header">/usr/include/libdbusmenu-gtk-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-gtk3</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libdbusmenu-glib</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gir-1.0/DbusmenuGtk3-*</Path>
+            <Path fileType="library">/usr/lib/libdbusmenu-gtk3.*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/DbusmenuGtk3-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-gtk3-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libdbusmenu-gtk3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libdbusmenu-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/vala/vapi/DbusmenuGtk3-*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/dbusmenu-gtk3-*</Path>
+            <Path fileType="header">/usr/include/libdbusmenu-gtk3-*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>16.04.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

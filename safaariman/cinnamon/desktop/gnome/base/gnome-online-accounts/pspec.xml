@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-online-accounts</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/gnome-online-accounts</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Provide online accounts information</Summary>
+        <Description>Provides interfaces so applications and libraries in GNOME can access the user's online accounts.</Description>
+        <Archive sha1sum="d356fc92ee7aee263cbd8ab939a0002016bf5010" type="targz">https://gitlab.gnome.org/GNOME/gnome-online-accounts/-/archive/3.36.0/gnome-online-accounts-3.36.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gcr-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>librest-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-online-accounts</Name>
+        <RuntimeDependencies>
+            <Dependency>gcr</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>librest</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/libgoa*</Path>
+            <Path fileType="library">/usr/lib/goa*</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-online-accounts-devel</Name>
+        <Summary>Development files for gnome-online-accounts</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-online-accounts</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/share/vala</Path>
+            <Path fileType="library">/usr/lib/girepository*</Path>
+            <Path fileType="library">/usr/share/gir-1.0</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

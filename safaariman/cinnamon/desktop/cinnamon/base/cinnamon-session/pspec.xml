@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-session</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-session</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <Summary>Cinnamon session manager</Summary>
+        <Description>Cinnamon-session manages a Cinnamon desktop or GDM login session. It starts up the other core components and handles logout and saving the session.</Description>
+        <Archive sha1sum="723de04fc4cd6e6ad609c6b3c9bc47084729abac" type="targz">https://github.com/linuxmint/cinnamon-session/archive/4.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>xmlto</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>xtrans</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>xapps-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXau-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-session</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>xapps</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>
+            <Dependency>cinnamon-translations</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

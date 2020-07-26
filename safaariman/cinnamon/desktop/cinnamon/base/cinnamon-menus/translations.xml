@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon-menus</Name>
+        <Summary xml:lang="tr">A menu system for the Cinnamon project</Summary>
+        <Description xml:lang="tr">cinnamon-menus is an implementation of the draft "Desktop Menu Specification" from freedesktop.org. This package also contains the Cinnamon menu layout configuration files, directory files and assorted menu related utility programs, Python bindings, and a simple menu editor.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cantarell-fonts</Name>
+        <Summary xml:lang="tr">Cantarell, a Humanist sans-serif font family</Summary>
+        <Description xml:lang="tr">Cantarell is a set of fonts designed by Dave Crossland. It is a sans-serif humanist typeface family.</Description>
+    </Source>
+</PISI>

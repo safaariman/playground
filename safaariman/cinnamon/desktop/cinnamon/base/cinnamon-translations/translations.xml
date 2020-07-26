@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon-translations</Name>
+        <Summary xml:lang="tr">Translations for Cinnamon and Nemo</Summary>
+        <Description xml:lang="tr">Translations for Cinnamon and Nemo</Description>
+    </Source>
+</PISI>

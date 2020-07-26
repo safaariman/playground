@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-pexpect</Name>
+        <Homepage>https://github.com/pexpect/pexpect</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>ISC</License>
+        <IsA>library</IsA>
+        <Summary>An efficient, pure Python replacement for Expect</Summary>
+        <Description>Pexpect is a pure Python module for spawning child applications, controlling them, and responding to expected patterns in their output. Pexpect works like Don Libes' Expect. Pexpect allows your script to spawn a child application and control it as if a human were typing commands.
+            Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc. It can be used to a automate setup scripts for duplicating software package installations on different servers. It can be used for automated software testing. Pexpect is in the spirit of Don Libes' Expect, but Pexpect is pure Python. Unlike other Expect-like modules for Python, Pexpect does not require TCL or Expect, nor does it require C extensions to be compiled. It should work on any platform that supports the standard Python pty module. The Pexpect interface was designed to be easy to use.</Description>
+        <Archive sha1sum="3f6c41a4a72dc802f3431f5d2367a4259f9b1813" type="targz">https://github.com/pexpect/pexpect/archive/4.8.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-pexpect</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-ptyprocess</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-03</Date>
+            <Version>4.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon-session</Name>
+        <Summary xml:lang="tr">Cinnamon session manager</Summary>
+        <Description xml:lang="tr">Cinnamon-session manages a Cinnamon desktop or GDM login session. It starts up the other core components and handles logout and saving the session.</Description>
+    </Source>
+</PISI>

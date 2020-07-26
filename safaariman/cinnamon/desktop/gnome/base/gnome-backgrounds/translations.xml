@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnome-backgrounds</Name>
+        <Summary xml:lang="tr">Background images for the GNOME desktop</Summary>
+        <Description xml:lang="tr">This module contains a set of backgrounds packaged with the GNOME desktop.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-distro</Name>
+        <Summary xml:lang="tr">Python library for getting information about Linux distros</Summary>
+        <Description xml:lang="tr">A much more elaborate, renewed alternative implementation for Python's platform.linux_distribution()</Description>
+    </Source>
+</PISI>

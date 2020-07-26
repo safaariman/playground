@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-backgrounds</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/gnome-backgrounds</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>CCBY2</License>
+        <License>CCBYSA2</License>
+        <License>CCBYSA3</License>
+        <IsA>data:image</IsA>
+        <Summary>Background images for the GNOME desktop</Summary>
+        <Description>This module contains a set of backgrounds packaged with the GNOME desktop.</Description>
+        <Archive sha1sum="83a88d105eb8a72cbbb0c9cff8af4f1864e4bf63" type="targz">https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/archive/3.36.0/gnome-backgrounds-3.36.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>glib2</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-backgrounds</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

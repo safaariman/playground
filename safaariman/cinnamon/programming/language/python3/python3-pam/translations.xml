@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pam</Name>
+        <Summary xml:lang="tr">Python bindings for PAM</Summary>
+        <Description xml:lang="tr">This release supports the core PAM API. There is still some missing functionality, but it should implement enough of the API for most needs. There is not much in the way of documentation at this point. If you are familiar with the PAM API, a quick glance at the sample program should get you going.</Description>
+    </Source>
+</PISI>

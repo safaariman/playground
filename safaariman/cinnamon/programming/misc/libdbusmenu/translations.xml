@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libdbusmenu</Name>
+        <Summary xml:lang="tr">Library for applications to pass a menu structure across DBus</Summary>
+        <Description xml:lang="tr">A small little library that was created by pulling out some common code out of indicator-applet. It passes a menu structure across DBus so that a program can create a menu simply without worrying about how it is displayed on the other side of the bus.</Description>
+    </Source>
+</PISI>

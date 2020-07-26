@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnome-online-accounts</Name>
+        <Summary xml:lang="tr">Provide online accounts information</Summary>
+        <Description xml:lang="tr">Provides interfaces so applications and libraries in GNOME can access the user's online accounts.</Description>
+    </Source>
+</PISI>

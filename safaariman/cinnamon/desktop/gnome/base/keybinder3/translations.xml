@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>keybinder3</Name>
+        <Summary xml:lang="tr">A library for registering global keyboard shortcuts</Summary>
+        <Description xml:lang="tr">libkeybinder3 is a library for registering global keyboard shortcuts. Keybinder works with GTK3-based applications using the X Window System.</Description>
+    </Source>
+</PISI>

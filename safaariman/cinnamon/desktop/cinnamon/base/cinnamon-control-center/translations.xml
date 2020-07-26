@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cinnamon-control-center</Name>
+        <Summary xml:lang="tr">Utilities to configure the Cinnamon desktop</Summary>
+        <Description xml:lang="tr">This package contains configuration utilities for the Cinnamon desktop, which allow to configure accessibility options, desktop fonts, keyboard and mouse properties, sound setup, desktop theme and background, user interface properties, screen resolution, and other settings.</Description>
+    </Source>
+</PISI>

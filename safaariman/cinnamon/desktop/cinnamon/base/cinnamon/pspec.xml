@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Window management and application launching for Cinnamon</Summary>
+        <Description>Cinnamon is a Linux desktop which provides advanced innovative features and a traditional user experience.</Description>
+        <Archive sha1sum="29289fe71ba9e0f123ea9abff03f81aebc4eafd4" type="targz">https://github.com/linuxmint/cinnamon/archive/4.6.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>cjs-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>muffin-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libcroco-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>cinnamon-menus-devel</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon</Name>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>caribou</Dependency>
+            <Dependency>cinnamon-control-center</Dependency>
+            <Dependency>cinnamon-menus</Dependency>
+            <Dependency>cinnamon-screensaver</Dependency>
+            <Dependency>cinnamon-session</Dependency>
+            <Dependency>cinnamon-settings-daemon</Dependency>
+            <Dependency>cjs</Dependency>
+            <Dependency>gnome-backgrounds</Dependency>
+            <Dependency>gnome-themes-extra</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libkeybinder3</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>muffin</Dependency>
+            <Dependency>nemo</Dependency>
+            <Dependency>network-manager-applet</Dependency>
+            <Dependency>polkit-gnome</Dependency>
+            <Dependency>python3-cairo</Dependency>
+            <Dependency>dbus-python3</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>python3-pam</Dependency>
+            <Dependency>python3-pexpect</Dependency>
+            <Dependency>python3-pillow</Dependency>
+            <Dependency>python3-pytz</Dependency>
+            <Dependency>python3-xapp</Dependency>
+            <Dependency>libtimezonemap</Dependency>
+            <Dependency>xapps</Dependency>
+            <Dependency>blueberry</Dependency>
+            <Dependency>cinnamon-translations</Dependency>
+            <Dependency>system-config-printer-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-menus</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-menus</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app</IsA>
+        <Summary>A menu system for the Cinnamon project</Summary>
+        <Description>cinnamon-menus is an implementation of the draft "Desktop Menu Specification" from freedesktop.org. This package also contains the Cinnamon menu layout configuration files, directory files and assorted menu related utility programs, Python bindings, and a simple menu editor.</Description>
+        <Archive sha1sum="42b21ffd917591ae1effc6ff00068060d6e302b3" type="targz">https://github.com/linuxmint/cinnamon-menus/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-menus</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-menus-devel</Name>
+        <Summary>Development files for cinnamon-menus</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-menus</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

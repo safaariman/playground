@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-xapp</Name>
+        <Summary xml:lang="tr">Python bindings for xapps</Summary>
+        <Description xml:lang="tr">Python bindings for xapps</Description>
+    </Source>
+</PISI>

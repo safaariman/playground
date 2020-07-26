@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cinnamon-control-center</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-control-center</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <Summary>Utilities to configure the Cinnamon desktop</Summary>
+        <Description>This package contains configuration utilities for the Cinnamon desktop, which allow to configure accessibility options, desktop fonts, keyboard and mouse properties, sound setup, desktop theme and background, user interface properties, screen resolution, and other settings.</Description>
+        <Archive sha1sum="eb89b9768369adf262b1a7d4bbba337a1c46e89a" type="targz">https://github.com/linuxmint/cinnamon-control-center/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>make</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>timezone</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>colord-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libmm-glib-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>cinnamon-menus-devel</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+            <Dependency>accountsservice-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+            <Dependency>gnome-online-accounts-devel</Dependency>
+            <Dependency>network-manager-applet-devel</Dependency>
+            <Dependency>network-manager-applet-devel</Dependency>
+            <Dependency>cinnamon-settings-daemon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-control-center</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>colord</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libmm-glib</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>
+            <Dependency>cinnamon-translations</Dependency>
+            <Dependency>gnome-online-accounts</Dependency>
+            <Dependency>network-manager-applet</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib/cinnamon-control-center-1</Path>
+            <Path fileType="library">/usr/lib/libcinnamon-control-center*</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-control-center-devel</Name>
+        <Summary>Development files for cinnamon-control-center</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-control-center</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

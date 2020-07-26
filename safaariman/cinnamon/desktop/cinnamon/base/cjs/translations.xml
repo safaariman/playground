@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cjs</Name>
+        <Summary xml:lang="tr">Javascript Bindings for Cinnamon</Summary>
+        <Description xml:lang="tr">Makes it possible for applications to use all of GNOME's platform libraries using the Javascript language. It's mainly based on the Mozilla javascript engine and the GObject introspection framework.</Description>
+    </Source>
+</PISI>

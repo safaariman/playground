@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xapps</Name>
+        <Summary xml:lang="tr">Common files for XApp desktop apps</Summary>
+        <Description xml:lang="tr">This package includes files that are shared between several XApp apps (i18n files and configuration schemas).</Description>
+    </Source>
+</PISI>

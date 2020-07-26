@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-bluetooth</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/gnome-bluetooth</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:gui</IsA>
+        <Summary>GNOME Bluetooth Subsystem</Summary>
+        <Description>The gnome-bluetooth package contains graphical utilities to setup, monitor and use Bluetooth devices.</Description>
+        <Archive sha1sum="af14db41710a978fa32c0ba2ee7a8af031bfdc88" type="tarxz">https://download.gnome.org/sources/gnome-bluetooth/3.34/gnome-bluetooth-3.34.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libcanberra-gtk-devel</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-bluetooth</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libgnome-bluetooth.*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome-bluetooth</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-bluetooth-devel</Name>
+        <Summary>Development files for gnome-bluetooth</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-bluetooth</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/share/gir-1.0/*.gir</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-03</Date>
+            <Version>3.34.1</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

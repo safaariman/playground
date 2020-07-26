@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-xapp</Name>
+        <Homepage>https://github.com/linuxmint/python3-xapp</Homepage>
+        <Packager>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for xapps</Summary>
+        <Description>Python bindings for xapps</Description>
+        <Archive sha1sum="94ff8de56b07610ed8099813c29e60bfedec73f3" type="targz">https://github.com/linuxmint/python3-xapp/archive/2.0.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-xapp</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>python-psutil</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/xapp</Path>
+            <Path fileType="data">/usr/lib/python2.7/site-packages/python_xapp-*.egg-info</Path>
+            <Path fileType="doc">/usr/share/doc/python-xapp</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-xapp</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-psutil</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.6/site-packages/xapp</Path>
+            <Path fileType="data">/usr/lib/python3.6/site-packages/python_xapp-*.egg-info</Path>
+            <Path fileType="doc">/usr/share/doc/python3-xapp</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>2.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Safa Arıman</Name>
+            <Email>safaariman@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
